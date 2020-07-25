@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Novela by Narative`,
@@ -40,8 +42,8 @@ module.exports = {
         basePath: "/",
         authorsPage: true,
         sources: {
-          local: true,
-          // contentful: true,
+          // local: true,
+          contentful: true,
         },
       },
     },
@@ -57,9 +59,18 @@ module.exports = {
         icon: `src/assets/favicon.png`,
       },
     },
+    /*
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
+      },
+    },
+    */
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
