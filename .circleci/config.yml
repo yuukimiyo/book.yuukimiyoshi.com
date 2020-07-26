@@ -23,7 +23,7 @@ jobs:
             - run: yarn test
             - run: yarn cache clean
             - run: gatsby build --prefix-paths
-            - run: yarn deploy
+            - run: gh-pages -d public
 workflows:
     build-and-deploy:
       jobs:
