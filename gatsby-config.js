@@ -1,10 +1,12 @@
 require('dotenv').config();
 
 module.exports = {
+  pathPrefix: `/bookshelf.yuukimiyoshi.com/`,
   siteMetadata: {
     title: `Novela by Narative`,
     name: `Narative`,
-    siteUrl: `https://novela.narative.co`,
+    // siteUrl: `https://novela.narative.co`,
+    siteUrl: `https://yuukimiyo.github.io`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
       heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
@@ -40,6 +42,7 @@ module.exports = {
         contentPosts: "content/posts",
         contentAuthors: "content/authors",
         basePath: "/",
+        // basePath: "/bookshelf.yuukimiyoshi.com/",
         authorsPage: true,
         sources: {
           // local: true,
