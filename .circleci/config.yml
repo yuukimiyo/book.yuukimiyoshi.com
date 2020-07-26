@@ -19,14 +19,12 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install
-            - run: npm test
-            - run: npm run deploy
+            - run: yarn
+            - run: yarn test
+            - run: yarn cache clean
+            - run: gatsby build --prefix-paths
+            - run: yarn deploy
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
-
     build-and-deploy:
       jobs:
         - build-and-deploy
