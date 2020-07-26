@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 module.exports = {
-  pathPrefix: `/bookshelf.yuukimiyoshi.com/`,
+  pathPrefix: `/bookshelf.ymiyo.com/`,
   siteMetadata: {
     title: `Novela by Narative`,
     name: `Narative`,
